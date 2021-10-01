@@ -23,7 +23,7 @@
   		}else{
   			errmsg.textContent = '사용가능한 이메일입니다.';
   			mid.readOnly = "readOnly";
-  			joinBtn.removeAttribute('disabled');					//속성제거
+  			//joinBtn.removeAttribute('disabled');					//속성제거
   			dupChk.setAttribute('disabled','disabled');		//속성추가 및 수정
   		}
   	}
@@ -93,11 +93,14 @@
   		}
   		
   		//닉네임 유효성 체크
-  		 const str = "...";
-  		if(str.search(/\W|\s/g) > -1){
-  			nerrmsg.textContent = '공백또는 특수문자가 있습니다';
+  		
+  		const str = mnickname.value;
+  		
+  		if(str.search(/\W|\s/g) > -1 ){
+  			nerrmsg.textContent = '특수문자 또는 공백이있습니다';
   			return false;
-  		} 
+  		}
+  		
 
   		//ajax call
   		const url = "/api/members/nickname/dupchk?"+"mnickname="+mnickname.value;

@@ -1,17 +1,24 @@
 @charset "UTF-8";
 
+main{
+	  	display: grid;
+	  	grid-template-columns: 150px 800px;
+	  	gap: 100px;
+	  	margin-top:50px;
+	  	margin-bottom:50px;
+	  }
+
 .infopw{
 	display: flex;
     text-align: center;
     justify-content: center;
     border: 1px solid grey;
-    height: 270px;
     width: 600px;
-    padding-top: 30px;
-    margin-left: 320px;
+    padding: 30px;
+    margin-left: 30px;
 }
 .pw{
-	font-size: 40px;
+	font-size: 25px;
 	color: darkcyan;
 }
 .form-control{
@@ -32,6 +39,9 @@
 	width: 150px;
     height: 40px;
     font-size: 15px;
+}
+.btn{
+	margin: 20px;
 }
 /**
 바디에 그리드 적용

@@ -12,18 +12,19 @@
 	  	display: grid;
 	  	grid-template-columns: 150px 800px;
 	  	gap: 100px;
-	  	margin-top:30px;
+	  	margin-top:50px;
+	  	margin-bottom:50px;
 	  }
 	  .Board_menu{
 	  margin-bottom:20px;
 	  }
 	  .Board_menu a{
-	  font-size:30px;
+	  font-size:20px;
 	  margin-right:20px;
 	  border:1px solid grey;
 	  padding:5px;
 	  border-radius:5px;
-	  background-color:green;
+	  background-color:rgb(0, 149, 0);
 	  color:white;
 	  }
 	  
@@ -75,11 +76,9 @@
 	          </tr>
           </tbody>
         </table>
-      </div>
-     </div>
-    </div>
-      
-	<!-- 페이징 -->
+        
+        
+     <!-- 페이징 -->
 	<div class="wrap-bbs-paging">
 	  <ul class="pagination pagination-sm justify-content-center">
 	  	<th:block th:if="${fc.prev}">
@@ -131,6 +130,13 @@
 			<button id="searchBtn" type="button" class="btn btn-outline-secondary btn-sm" th:data-category="${category}">검색</button>
 		</div>
 	</div>
+     
+      </div>
+     </div>
+     
+    </div>
+      
+	
   
 	<footer th:replace="/fragment/fragment_footer :: fragment_footer"></footer>
 	
