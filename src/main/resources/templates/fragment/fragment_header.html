@@ -35,7 +35,7 @@
 	      </div>
 	       <div class="top" th:if="${session.loginMember}">
 	       <div><label for="" th:text="|${session.loginMember.nickname}님 환영합니다 : )|"></label></div>
-	       <div class="dropdown"><button  class="dropbtn"><i class="fas fa-user" id="user"></i></button>
+	       <div class="dropdown"><button class="dropbtn"><i class="fas fa-user" id="user" onclick="javascript:location.href='/mypage/myinfo'"></i></button>
 			    <div id="myDropdown" class="dropdown-content">
 			      <a th:href="@{/mypage/myinfo}">내 정보 수정</a>
 			      <a href="#" th:href="@{/order/myOrderList}">내 주문 내역</a>

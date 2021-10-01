@@ -128,6 +128,7 @@
     grid-template-columns: 200px 350px;
     gap: 30px;
     margin-top: 30px;
+    margin-bottom:30px;
   }
   img#footerImg{
     width: 200px; height: 130px;
@@ -188,7 +189,7 @@
 }
 i#user, i#shopping_basket{
   font-size: 30px;
-  color:grey;
+  color: grey;
 }
 i#user:hover, i#shopping_basket:hover{
 	color:green;

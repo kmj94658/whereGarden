@@ -30,7 +30,7 @@
 		
 		document.getElementById('d-tel').value = 
 				document.getElementById('hiddenTel').value;
-s
+
 		document.getElementById('sample4_postcode').value = 
 				document.getElementById('hiddenPost').value;
 		document.getElementById('sample4_roadAddress').value = 

@@ -26,19 +26,19 @@
   	연습용 빈 nav입니다.
   	</nav>
         <form  th:method="patch" th:action="@{/mypage/edit}" th:object="${editForm}" >
-  	    <form  th:method="patch" th:action="@{/mypage/edit2}" th:object="${editForm}" >
   	
          <ul>
-         		<li><h1 class="title">회원 수정</h1></li>
+         		<li class="title"><h1 class="title">회원 수정</h1></li>
          	  <li><label for="mid" class="form-label">아이디</label></li>
       	    <li><input class="form-control" type="text" th:field="*{mid}" readonly/></li>
+            <li><label for="mpw" class="form-label">비밀번호</label></li>
             <li><input id="pwinput" class="form-control" type="password" th:field="*{mpw}"/></li>
             <li th:errors="*{mpw}" th:errorclass="field-msg"></li> 
             <li><label class="form-label" for="mpwchk">비밀번호 확인</label></li>
             <li><input id="pwinput" class="form-control" type="password" th:field="*{mpwchk}"></li> 
 				    <li th:errors="*{mpwchk}" th:errorclass="field-msg"></li> 
             <li><label class="form-label" for="mquestion" >비밀번호 찾기 질문</label></li>
-            <li><select th:field="*{mquestion}">
+            <li><select class="form-control" th:field="*{mquestion}">
           			<option  value="">-- 선택 --</option>
       					<option value="나의 보물 1호는?">나의 보물 1호는?</option>
       					<option value="나의 학창시절 별명은?">나의 학창시절 별명은?</option>
@@ -73,17 +73,12 @@
           	 <li th:errors="*{mnickname}" th:errorclass="field-msg"></li>
           
           <li class=button>
-            <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="return confirm('정말로 수정 하시겠습니까?')" id="modifyBtn">수정하기</button>
-            <button class="btn btn-primary btn-lg btn-block" type="reset">취소</button>
-            <button class="btn btn-primary btn-lg btn-block" type="submit" th:formaction="@{/mypage/out}" onclick="return confirm('정말로 탈퇴 하시겠습니까?')">탈퇴</button>
+            <button class="btn btn-success btn-block" type="submit" onclick="return confirm('정말로 수정 하시겠습니까?')" id="modifyBtn">수정하기</button>
+            <button class="btn btn-success btn-block" type="reset">취소</button>
+            <button class="btn btn-success btn-block" type="submit" th:formaction="@{/mypage/out}" onclick="return confirm('정말로 탈퇴 하시겠습니까?')">탈퇴</button>
           </li>
           </ul>
           </form>
-<!--           <li>
-          <form th:action="@{/mypage/out}" th:method="delete" >
-						<button type="submit" class="btn" id='Btn'>탈퇴하기</button>
-					 </form>
-          </li> -->
         </div>
         </main>
 

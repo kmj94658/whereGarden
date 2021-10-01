@@ -67,6 +67,12 @@ public class HomeController {
 		MemberDTO memberDTO = 
 				memberSVC.isLogin(loginForm.getMid(), loginForm.getMpw());
 		
+		//탈퇴된 회원일때
+				if(memberSVC.deleteEmail(loginForm.getMid())) {
+					bindingResult.reject("error.login", "탈퇴된 회원입니다");
+					return "loginForm";
+				}
+				
 		//아이디는 맞는데 비밀번호가 틀렸을때
 		if(memberSVC.isExistEmail(loginForm.getMid()) && memberDTO == null) {
 			bindingResult.reject("error.login", "비밀번호가 틀렸습니다");
@@ -78,6 +84,8 @@ public class HomeController {
 			bindingResult.reject("error.login", "회원정보가 없습니다");
 			return "loginForm";
 		}
+		
+		
 		
 		//세션생성
 		//세션이 있으면 가져오고 없으면 새롭게 생성
